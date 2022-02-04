@@ -1,0 +1,13 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.topic-filters {
+  margin-top: 30px;
+}
+
+.add-post {
+  direction: rtl;
+}

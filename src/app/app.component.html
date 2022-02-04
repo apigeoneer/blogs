@@ -1,0 +1,44 @@
+<header *ngIf="(isHandset | async)!.matches">
+  <button class="toggle-btn" (click)="sidenav.open()" *ngIf="!sidenav.opened">
+    <i class="fas fa-bars"></i>
+  </button>
+  <h1 class="heading-name">DevD</h1>
+</header>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches"
+  >
+    <h1 class="heading-name-web" *ngIf="!(isHandset | async)!.matches">DevD</h1>
+
+    <button
+      class="toggle-btn"
+      (click)="sidenav.close()"
+      *ngIf="sidenav.opened && (isHandset | async)!.matches"
+    >
+      <i class="fas fa-times"></i>
+    </button>
+    <app-left-navbar></app-left-navbar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-main></app-main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<footer>
+  <div>
+    <p>
+      This blog is maintained by Chitranshi Srivastava. She lives in Bengaluru,
+      India & works as a full-stack developer.
+    </p>
+    <a href="#">GitHub</a>
+    <a href="#">Ig</a>
+    <a href="#">Twitter</a>
+  </div>
+  <div>
+    <img class="my-pic" src="../assets/images/mypic.JPG" alt="" />
+  </div>
+</footer>

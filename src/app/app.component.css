@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  width: 240px;
+  padding: 14px 24px;
+  align-items: start;
+}
+
+.heading-name {
+  margin: 0;
+  margin-left: 8px;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  padding-top: 6px;
+}
+
+.heading-name-web {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  padding: 0 24px;
+  width: 240px;
+}
+
+mat-sidenav-content {
+  padding: 15px 8px;
+}
+
+mat-sidenav-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* web */
+@media (min-width: 720px) {
+  mat-sidenav-content {
+    padding: 40px 30px;
+  }
+}
+
+footer {
+  padding: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.my-pic {
+  width: 100px;
+  height: 100px;
+}
